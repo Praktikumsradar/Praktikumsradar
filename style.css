@@ -1,0 +1,241 @@
+:root {
+    /* Farben
+    Background: #151923
+    Text: #66FCF1
+    Header & Footer: #202833
+    Extra: #45A29F
+    */
+    --primary-color: #151923;
+    --header-color: #151923;
+    accent-color: #151923;
+    --font-color: #66FCF1;
+    --background-color: #202833;
+    --font-size: 15px;
+    --main-border-radius: 5px;
+    --big-border-radius: 20px;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --main-transition: 0.3s;
+    --main-margin-xxs: 4px;
+    --main-margin-xs: 8px;
+    --main-margin-s: 12px;
+    --main-margin-m: 16px;
+    --main-margin-l: 20px;
+    --main-margin-xl: 28px;
+    --main-margin-xxl: 40px;
+    --main-margin-xxxl: 60px;
+    --main-margin-xxxxl: 80px;
+    --main-margin-xxxxxl: 100px;
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(Noto-Sans/NotoSans-Bold.ttf)
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "NotoSans", serif;
+    z-index: -1;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+main {
+    flex: 1;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.standart{
+    text-decoration: underline;
+    color: lightblue;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 75px;
+    margin: var(--main-margin-xs);
+    padding: var(--main-margin-l);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    transition: var(--main-transition); 
+    flex-wrap: wrap;
+    gap: var(--main-margin-s);
+    background-color: #151923;
+}
+
+.logo-img{
+    width: 58px;
+    height: 66px;
+}
+
+.filter{
+    text-align: center;
+    height: fit-content !important;
+}
+
+nav{
+    width: fit-content;
+    height: auto;
+    gap: 10px;
+    display: flex;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--main-margin-s);
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+button{
+    font-family: "NotoSans", serif;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: auto; /* Bleibt erhalten */
+    padding: var(--main-margin-m);
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+
+
+.praktikum{
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    width: 95%;
+    height: auto;
+    margin: var(--main-margin-m);
+    padding: var(--main-margin-m);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    transition: var(--main-transition); 
+    flex-wrap: wrap;
+    gap: var(--main-margin-s);
+    background-color: #151923;
+    font-size: 20px
+}
+
+/* Large Desktop, TV, etc. */
+@media screen and (min-width: 1200px) {}
+
+/* Tablet landscape, laptop, Desktop */
+@media screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Tablet portrait */
+@media screen and (min-width: 767px) and (max-width: 991px) {}
+
+/* Mobile landscape */
+@media screen and (min-width: 480px) and (max-width: 766px) {
+    form{
+        flex-direction: column;
+    }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 479px) {
+    form{
+        flex-direction: column;
+    }
+
+}
+
+#home-content.content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Stil für die Startseite */
+.home{
+    padding: var(--main-margin-s);
+}
+
+.home h1{ /* Stil für die Überschrift der Startseite */
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.home p {
+    text-align: center;
+    color: white;
+    font-size: 25px
+}
+
+.kontakt h1 { /* Stil für die Überschrift der Kontaktseite */
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.kontakt p { /* Stil für den Text der Kontaktseite */
+    text-align: justify;
+    margin-left: 150px;
+    font-size: 25px;
+    color: white;
+}
+
+.bewerben h1 {
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.bewerben p {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.bewerben ul {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.header p {
+    font-size: 20px;
+    position: relative;
+    top: -70px;
+    right: -75px;
+}
+.header nav {
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+}
+
