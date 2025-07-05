@@ -23,7 +23,8 @@ function createHeader(){
                 <a href = "homepage.html">Startseite |</a>
                 <a href = "praktika.html">Praktika |</a>
                 <a href = "kontakt.html">Kontakt |</a>
-                <a href = "bewerben.html">Bewerben</a>
+                <a href = "bewerben.html">Bewerben |</a>
+                <a href = "impressum.html">Impressum </a>
             </nav>
         </section>
     `; // Set the inner HTML
@@ -373,5 +374,29 @@ function loadBewerben() { // ladet die Bewerbungsseite
     body.innerHTML = ''; // Clear the body content
     body.appendChild(createHeader()); // Append the header
     body.appendChild(createBewerben()); // Append the Bewerbungsseite
+    body.appendChild(createFooter()); // Append the footer
+}
+
+function createImpressum(){ // erstellt die Kontaktseite
+    const main = document.createElement('main'); // Create a main element
+    main.className = 'impressum';
+    main.innerHTML = `
+    <section>
+        <ul>
+            <li>Name:Andreas Köhler, Urs Dudzus</li>
+            <li>Schule: <a class = standart href="https://www.siemens-gymnasium-berlin.de/">Werner-von-Siemens Gymnasiums Berlin</a></li>
+            <li>Addresse: a class = standart href = "https://www.google.com/maps/place/Werner-von-Siemens-Gymnasium/@52.4321016,13.2068833,17z/data=!3m1!4b1!4m6!3m5!1s0x47a85974fdb72b27:0xc55e6a1770b8edf2!8m2!3d52.4320984!4d13.2117542!16s%2Fg%2F11dxlg1yr1?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D">Beskidenstraße 1, 14129 Berlin</a></li>
+            <li>E-Mail: köhler@siemens-gymnasium-berlin.de oder dudzus@siemens-gymnasium-berlin.de</li>
+        </ul>
+    </section>
+    `; // Set the inner HTML
+    return main; // Return the main element
+}
+
+function loadImpressum() { // ladet die Bewerbungsseite
+    const body = document.querySelector('body'); // Select the body element
+    body.innerHTML = ''; // Clear the body content
+    body.appendChild(createHeader()); // Append the header
+    body.appendChild(createImpressum()); // Append the Bewerbungsseite
     body.appendChild(createFooter()); // Append the footer
 }
