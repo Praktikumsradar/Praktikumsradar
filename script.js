@@ -36,7 +36,7 @@ function createFooter(){
     footer.className = 'footer'; // Set the class name
     footer.innerHTML = `
     <section>
-        <p style = "font-size: 10px">Diese Website wurde im Rahmen eines Schulprojektes des <a class = standart href="https://www.siemens-gymnasium-berlin.de/">Werner-von-Siemens Gymnasiums Berlin</a> von einer Schülergruppe entwickelt</p>
+        <p style = "font-size: 10px">Diese Website wurde im Rahmen eines Schulprojektes des <a class = standart href="https://www.siemens-gymnasium-berlin.de/">Werner-von-Siemens Gymnasiums Berlin</a> von einer Schülergruppe und der Hilfe von <a href = "https://nino678190.github.io/nic-tolksdorf/">Nic Tolksdorf</a> entwickelt</p>
     </section>
     `; // Set the inner HTML
     return footer; // Return the footer element
